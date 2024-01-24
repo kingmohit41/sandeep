@@ -13,6 +13,5 @@ def read_s3():
 
     obj = s3.get_object(Bucket=bucket_name, Key=file_key)
     df = pd.read_csv(obj['Body'])
-    logging.info(df)
     return df
 
