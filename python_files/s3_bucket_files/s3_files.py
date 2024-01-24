@@ -1,6 +1,9 @@
 import boto3
 import pandas as pd
 from io import BytesIO
+import pymongo
+from pymongo import MongoClient
+
 
 
 def read_s3_data(aws_access_key_id,aws_secret_access_key,bucket_name,prefix,conn_str,database,collection):
