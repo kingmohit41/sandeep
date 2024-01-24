@@ -2,6 +2,7 @@ import boto3
 import pandas as pd
 from io import BytesIO
 import pymongo
+import logging
 from pymongo import MongoClient
 
 
