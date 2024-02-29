@@ -41,7 +41,7 @@ func writeData(employees []Employee) error {
 
     client, err := mongo.NewClient(options.Client().ApplyURI(connStr))
     if err != nil {
-    return err
+        return err
     }
 
     ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -49,14 +49,20 @@ func writeData(employees []Employee) error {
 
     err = client.Connect(ctx)
     if err != nil {
-    return err
+        return err
     }
     defer client.Disconnect(ctx)
 
     collection := client.Database("pipeline").Collection("emp_data")
 
+    // Convert []Employee to []interface{}
+    var interfaceSlice []interface{}
+    for _, emp := range employees {
+        interfaceSlice = append(interfaceSlice, emp)
+    }
+
     // Inserting data into MongoDB
-    _, err = collection.InsertMany(ctx, employees)
+    _, err = collection.InsertMany(ctx, interfaceSlice)
     return err
 }
 
