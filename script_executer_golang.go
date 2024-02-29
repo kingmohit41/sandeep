@@ -22,7 +22,7 @@ type Employee struct {
 // empData function to generate employee data
 func empData() []Employee {
 	var employees []Employee
-	for i := 0; i < 20; i++ {
+	for i := 0; i < 40; i++ {
 		employee := Employee{
 			EmpID:       i,
 			Department:  randomChoice([]string{"IT", "HR", "Sales", "Operations"}),
