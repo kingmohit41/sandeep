@@ -13,5 +13,6 @@ function generate_employee_data(num_employees=10)
         salary = rand(10000:70000, num_employees),
         working_mode = rand(["Hybrid", "Onsite"], num_employees)
     )
+    println("=========================This script has run successfully=====================================")
     return employees
 end
