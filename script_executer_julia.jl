@@ -6,7 +6,7 @@ Pkg.add("DataFrames")
 using DataFrames
 
 # Function to generate sample employee data
-function generate_employee_data(10)
+function generate_employee_data(num_employees=10)
     employees = DataFrame(
         emp_id = 1:num_employees,
         department = rand(["IT", "HR", "Sales", "Operations"], num_employees),
