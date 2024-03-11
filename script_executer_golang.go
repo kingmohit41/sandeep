@@ -37,7 +37,7 @@ func empData() []Employee {
 
 // writeData function to insert data into MongoDB
 func writeData(employees []Employee) error {
-	connStr := "mongodb://chetan_user:chetan123@db.stg.bdb.ai:27017/pipeline?authMechanism=SCRAM-SHA-256"
+	connStr := ""
 
 	client, err := mongo.NewClient(options.Client().ApplyURI(connStr))
 	if err != nil {
