@@ -20,7 +20,7 @@ def write(l,conn_str):
     collection.insert_many(l)
 
     
-def start(conn_str):
+def start():
     l=emp_data()
     logging.info("=============================Employee data read===============================")
     # w=write(l,conn_str)
