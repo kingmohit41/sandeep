@@ -23,6 +23,6 @@ def write(l,conn_str):
 def start(conn_str):
     l=emp_data()
     logging.info("=============================Employee data read===============================")
-    w=write(l,conn_str)
-    logging.info("=============================Data Written=====================================") 
-    return ["Data Read and written successfully."]
+    # w=write(l,conn_str)
+    # logging.info("=============================Data Written=====================================") 
+    # return ["Data Read and written successfully."]
